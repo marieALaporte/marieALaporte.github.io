@@ -12,9 +12,9 @@ var force = d3.layout.force()
     .size([width, height]);
 
 
-d3.select("#main").selectAll("svg").remove();
+d3.select("body").selectAll("svg").remove();
 
-var svg = d3.select("#main")
+var svg = d3.select("body")
   .append("svg")
   .attr("width", 960)
   .attr("height", 500)
