@@ -1,8 +1,8 @@
 
 // Based on http://bl.ocks.org/mbostock/4062045
 
-var width = 960,
-    height = 500;
+var width = 100%,
+    height = 100%;
 
 var color = d3.scale.category20();
 
@@ -12,12 +12,12 @@ var force = d3.layout.force()
     .size([width, height]);
 
 
-d3.select("body").selectAll("svg").remove();
+d3.select("#main").selectAll("svg").remove();
 
-var svg = d3.select("body")
+var svg = d3.select("#main")
   .append("svg")
-  .attr("width", 960)
-  .attr("height", 500)
+  .attr("width", width)
+  .attr("height", height)
   .call(d3.behavior.zoom().on("zoom", function () {
     svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
   }))
