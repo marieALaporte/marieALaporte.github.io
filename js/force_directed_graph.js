@@ -1,8 +1,8 @@
 
 // Based on http://bl.ocks.org/mbostock/4062045
 
-var width = 1200,
-    height = 700;
+var width = 960,
+    height = 500;
 
 var color = d3.scale.category20();
 
