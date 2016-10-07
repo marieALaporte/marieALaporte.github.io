@@ -123,8 +123,8 @@ d3.json("data.json", function(error, graph) {
                       .enter()
                       .append("text")
                       .text(function (d) { 
-                        if(d.value!=0.1)
-                          return d.name; })
+                       if(d.value!=0.5 && d.group==9)
+                        return d.name; })
                       .style("text-anchor", "middle")
                       .style("fill", "#555")
                       .style("font-family", "Arial")
