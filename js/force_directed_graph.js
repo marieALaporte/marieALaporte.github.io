@@ -49,7 +49,7 @@ d3.json("data.json", function(error, graph) {
       .style("stroke-width", function(d) { return Math.sqrt(d.value); })
       .style("stroke", function(d) { 
         if(d.type == "exact")
-          return "black"; 
+          return "blue"; 
         else if(d.type == "subclass")
           return "green";
         else if(d.type =="superclass")
@@ -59,7 +59,7 @@ d3.json("data.json", function(error, graph) {
       .attr("y1", function(d) { return d.source.y; })
       .attr("x2", function(d) { return d.target.x; })
       .attr("y2", function(d) { return d.target.y; });
-      
+
 
     var node_drag = d3.behavior.drag()
           .on("dragstart", dragstart)
